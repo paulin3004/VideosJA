@@ -67,7 +67,7 @@ function App() {
             </p>
           </div>
 
-          <div className='w-full h-full flex items-center justify-center collapse lg:visible'>
+          <div className='w-full h-full hidden lg:block lg:flex lg:items-center lg:justify-center'>
 
             <div className='relative h-96 lg:h-fit flex justify-center items-start'>
               <a href="https://www.youtube.com" rel="noreferrer" target='_blank'className='z-10'><img src={cardfloat} alt="cardART" className='rounded-2xl animate-pinglow  h-auto w-52 lg:w-60 ' /></a>
