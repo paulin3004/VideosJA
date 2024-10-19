@@ -1,13 +1,24 @@
+import {useTypewriter, Cursor} from 'react-simple-typewriter'
 import './App.css';
+
+//Importando API de envio de email
 import emailjs from '@emailjs/browser';
 import { useState } from 'react';
 
+//Importando imagens
 import logoback from './img/logoback.png';
 import goldisc from './img/cdgoldx110.png';
 import bannerpc from './img/oldlogo1.0.png';
 import cardfloat from './img/cardback.png';
 
 function App() {
+
+  const [text] = useTypewriter(
+    {
+      words: ['Editor de vídeos e especialista em motion graphics, com mais de 1 milhão de visualizações em projetos anteriores. Criação stories e vídeos animados envolventes para redes sociais, utilizando técnicas avançadas para maximizar o impacto visual e o engajamento. Transforme suas ideias em conteúdos dinâmicos e envolventes com o poder audiovisual!']
+    }
+  )
+
   const [name, setName] = useState('')
   const [email, setEmail] = useState('')
   const [message, setMessage] = useState('')
@@ -57,20 +68,26 @@ function App() {
 
         <section className='z-0 w-11/12 h-full gap-5 flex flex-col items-center justify-center lg:flex-row lg:justify-center lg:items-center'>
 
-          <div className='w-full h-full text-center flex justify-center items-center flex-col'>
-            <div className='w-full mb-28 flex justify-center items-center lg:justify-start'>
+          <div id='LADO-A' className=' w-full h-full text-center flex justify-center items-center flex-col'>
+
+            <div className='w-full h-full  flex justify-center items-end lg:justify-start'>
               <img src={bannerpc} alt="VideosLOGO" />
             </div>
 
-            <p className='text-white font-mono text-justify mb-20'>
-              Editor de vídeos e especialista em motion graphics, com mais de 1 milhão de visualizações em projetos anteriores. Criação stories e vídeos animados envolventes para redes sociais, utilizando técnicas avançadas para maximizar o impacto visual e o engajamento. Transforme suas ideias em conteúdos dinâmicos e envolventes com o poder audiovisual!
-            </p>
+            <div className='h-full'>
+              <p className='text-white font-mono text-justify mt-12 h-full'>
+                <span>
+                  {text}
+                </span>
+                <Cursor/>
+              </p>
+            </div>
           </div>
 
-          <div className='w-full h-full hidden lg:block lg:flex lg:items-center lg:justify-center'>
+          <div id='LADO-B' className=' w-full h-full hidden lg:block lg:flex lg:items-center lg:justify-center'>
 
             <div className='relative h-96 lg:h-fit flex justify-center items-start'>
-              <a href="https://www.youtube.com" rel="noreferrer" target='_blank'className='z-10'><img src={cardfloat} alt="cardART" className='rounded-2xl animate-pinglow  h-auto w-52 lg:w-60 ' /></a>
+              <img src={cardfloat} alt="cardART" className='rounded-2xl animate-pinglow z-10  h-auto w-52 lg:w-60 ' />
               <img src={cardfloat} alt="cardART" className='absolute rounded-2xl shadow-sm shadow-purple-700 h-auto w-52  lg:w-60 '/>
             </div>
         
