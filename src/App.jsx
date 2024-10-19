@@ -74,11 +74,9 @@ function App() {
               <img src={bannerpc} alt="VideosLOGO" />
             </div>
 
-            <div className='h-full'>
+            <div className='h-full w-full'>
               <p className='text-white font-mono text-justify mt-12 h-full'>
-                <span>
-                  {text}
-                </span>
+                {text}
                 <Cursor/>
               </p>
             </div>
