@@ -1,5 +1,4 @@
 import './App.css';
-
 import {JackInTheBox} from "react-awesome-reveal";
 
 //importanto components
@@ -24,9 +23,9 @@ function App() {
         <Content />
       </section>
 
-      <main className='w-full min-h-screen flex justify-center items-center flex-col gap-44'>
+      <main className='w-full min-h-screen flex justify-center items-center flex-col gap-20 lg:gap-40'>
         <JackInTheBox>
-          <h1 className=' text-white text-center z-0 font-game text-5xl space-x-3 font-bold tracking-wider animate-bounce'>SEND YOUR MESSAGE</h1>
+          <h1 className=' text-white text-center z-0 font-game text-5xl space-x-3 font-bold tracking-wider'>SEND YOUR MESSAGE</h1>
         </JackInTheBox>
         <Forms/>
       </main>

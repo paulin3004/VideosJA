@@ -41,7 +41,7 @@ function Forms() {
             <form onSubmit={SendEmail} className='mx-4 flex items-center flex-col'>
                 
                 <div class=" w-full max-w-md min-w-40 mb-3">
-                    <Fade direction="left">
+                    <Fade>
                         <div >
                             <input
                             id='name'
@@ -56,7 +56,7 @@ function Forms() {
                 </div>
 
                 <div class="w-full max-w-md min-w-40 mb-3 f">
-                    <Fade direction="right" delay={100}>
+                    <Fade delay={100}>
                         <div>
                             <input
                             id='email'
@@ -71,7 +71,7 @@ function Forms() {
                 </div>
 
                 <div class="w-full max-w-md min-w-40 mb-6">
-                    <Fade direction="left" delay={200}>
+                    <Fade delay={200}>
                         <div>
                             <textarea
                             id='message'
@@ -87,7 +87,7 @@ function Forms() {
                 </div>
 
                 <div className=' w-full max-w-md min-w-40'>
-                    <Fade direction="right" delay={300}>
+                    <Fade delay={300}>
                         <div>
                             <button
                             className='w-full bg-violet-950 placeholder:text-slate-200 text-white text-sm border border-violet-600 rounded-md px-3 py-2 transition duration-300 ease focus:outline-none focus:border-slate-800 hover:border-violet-300 shadow-sm focus:shadow'>SEND</button>
