@@ -1,3 +1,4 @@
+import {Fade} from "react-awesome-reveal";
 //Importando API de envio de email
 import emailjs from '@emailjs/browser';
 import { useState } from 'react';
@@ -40,42 +41,58 @@ function Forms() {
             <form onSubmit={SendEmail} className='mx-4 flex items-center flex-col'>
                 
                 <div class=" w-full max-w-md min-w-40 mb-3">
-                    <input 
-                    id='name' 
-                    type='text'
-                    onChange={(e) => setName(e.target.value)}
-                    value={name}
-                    placeholder="Enter your name..." 
-                    class="w-full  bg-violet-950 placeholder:text-slate-200 text-white text-sm border border-violet-600 rounded-md px-3 py-2 transition duration-300 ease focus:outline-none focus:border-slate-800 hover:border-violet-300 shadow-sm focus:shadow" 
-                    />
+                    <Fade direction="left">
+                        <div >
+                            <input
+                            id='name'
+                            type='text'
+                            onChange={(e) => setName(e.target.value)}
+                            value={name}
+                            placeholder="Enter your name..."
+                            class="w-full  bg-violet-950 placeholder:text-slate-200 text-white text-sm border border-violet-600 rounded-md px-3 py-2 transition duration-300 ease focus:outline-none focus:border-slate-800 hover:border-violet-300 shadow-sm focus:shadow"
+                            />
+                        </div>
+                    </Fade>
                 </div>
 
                 <div class="w-full max-w-md min-w-40 mb-3 f">
-                    <input 
-                    id='email' 
-                    type='email'
-                    onChange={(e) => setEmail(e.target.value)}
-                    value={email}
-                    placeholder="Type your email..."
-                    class="w-full  bg-violet-950 placeholder:text-slate-200 text-white text-sm border border-violet-600 rounded-md px-3 py-2 transition duration-300 ease focus:outline-none focus:border-slate-800 hover:border-violet-300 shadow-sm focus:shadow" 
-                     />
+                    <Fade direction="right" delay={100}>
+                        <div>
+                            <input
+                            id='email'
+                            type='email'
+                            onChange={(e) => setEmail(e.target.value)}
+                            value={email}
+                            placeholder="Type your email..."
+                            class="w-full  bg-violet-950 placeholder:text-slate-200 text-white text-sm border border-violet-600 rounded-md px-3 py-2 transition duration-300 ease focus:outline-none focus:border-slate-800 hover:border-violet-300 shadow-sm focus:shadow"
+                             />
+                        </div>
+                    </Fade>
                 </div>
 
                 <div class="w-full max-w-md min-w-40 mb-6">
-                    <textarea 
-                    id='message' 
-                    name="message" 
-                    onChange={(e) => setMessage(e.target.value)}
-                    value={message}
-                    cols="30" rows="10"
-                    placeholder="Type your message for me..."
-                    className = "w-full  bg-violet-950 placeholder:text-slate-200 text-white text-sm border border-violet-600 rounded-md px-3 py-2 transition duration-300 ease focus:outline-none focus:border-slate-800 hover:border-violet-300 shadow-sm focus:shadow">
-                    </textarea>
+                    <Fade direction="left" delay={200}>
+                        <div>
+                            <textarea
+                            id='message'
+                            name="message"
+                            onChange={(e) => setMessage(e.target.value)}
+                            value={message}
+                            cols="30" rows="10"
+                            placeholder="Type your message for me..."
+                            className = "w-full  bg-violet-950 placeholder:text-slate-200 text-white text-sm border border-violet-600 rounded-md px-3 py-2 transition duration-300 ease focus:outline-none focus:border-slate-800 hover:border-violet-300 shadow-sm focus:shadow">
+                            </textarea>
+                        </div>
+                    </Fade>
                 </div>
 
                 <div className=' w-full max-w-md min-w-40'>
-                    <button 
-                    className='w-full bg-violet-950 placeholder:text-slate-200 text-white text-sm border border-violet-600 rounded-md px-3 py-2 transition duration-300 ease focus:outline-none focus:border-slate-800 hover:border-violet-300 shadow-sm focus:shadow'>SEND</button>
+                    <Fade direction="right" delay={300}>
+                        <div>
+                            <button
+                            className='w-full bg-violet-950 placeholder:text-slate-200 text-white text-sm border border-violet-600 rounded-md px-3 py-2 transition duration-300 ease focus:outline-none focus:border-slate-800 hover:border-violet-300 shadow-sm focus:shadow'>SEND</button>
+                        </div>
+                    </Fade>
                 </div>
 
             </form>

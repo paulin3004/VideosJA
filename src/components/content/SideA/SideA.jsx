@@ -1,5 +1,6 @@
 import bannerpc from './styelcomponents/oldlogo1.0.png';
 import {useTypewriter, Cursor} from 'react-simple-typewriter'
+import {Slide} from "react-awesome-reveal";
 
 
 
@@ -14,14 +15,16 @@ function SideA() {
         <div id='LADO-A' className=' w-full h-full text-center flex justify-center items-center flex-col'>
 
             <div className='w-full h-full  flex justify-center items-end lg:justify-start'>
-                <img src={bannerpc} alt="VideosLOGO" />
+                <Slide triggerOnce><img src={bannerpc} alt="VideosLOGO" /></Slide>
             </div>
 
             <div className='h-full w-full'>
-                <p className='text-white font-mono text-justify mt-12 h-full'>
-                    {text}
-                    <Cursor/>
-                </p>
+                <Slide triggerOnce>
+                    <p className='text-white font-mono text-justify mt-12 h-full'>
+                        {text}
+                        <Cursor/>
+                    </p>
+                </Slide>
             </div>
         </div></>
     )
